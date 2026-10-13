@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+
+.menu-box {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+.menu-box button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;   
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.menu-box button:hover {
+    background-color: #0056b3;
+}
+
+.analysis-workspace {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.left-panel {
+    flex: 0 0 480px;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 480px; /* 與棋盤等高 */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.engine-box {
+    padding: 12px 15px;
+    background-color: #262421;
+    color: #fff;
+    border-bottom: 2px solid #3d3934;
+    min-height: 75px;
+}
+
+.engine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.engine-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #bababa;
+}
+
+.eval-badge {
+    background-color: #fff;
+    color: #262421;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.engine-line {
+    font-size: 13px;
+    color: #d9d9d9;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.moves-box {
+    flex: 1;
+    overflow-y: auto;
+    font-size: 14px;
+    user-select: none;
+}
+
+/* 主線 */
+.move-row {
+    display:flex;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 28px;
+}
+
+.move-num {
+    width: 45px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #888;
+    border-right: 1px solid #eee;
+    font-size: 12px;
+}
+
+.move-cell {
+    flex: 1;
+    padding: 0 12px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+}
+
+.move-cell:hover {
+    background-color: #e2e6ea;
+}
+
+.move-cell.empty {
+    cursor: default;
+    color: #aaa;
+}
+
+.move-cell.empty:hover {
+    background-color: transparent;
+}
+
+/* 當前所在的步數 */
+.move-cell.active, .var-move.active {
+    background-color: #d1e7fd !important;
+    color: #084298 !important;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* 支線 */
+.variation-box {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    border-left: 3px solid #6c757d;
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.variation-line {
+    margin: 2px 0;
+}
+
+.var-move {
+    cursor: pointer;
+    padding: 1px 4px;
+    margin: 0 1px;
+    color: #333;
+}
+
+.var-move:hover {
+    background-color: #e2e6ea;
+    border-radius: 3px;
+}
+
+.sub-variation {
+    color: #666;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.controls button {
+    padding: 8px 14px;
+    font-size: 14px;
+    margin: 0 3px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff
+}
+
+.controls button:hover {
+    background-color: #f0f0f0;
+}
+
+.controls .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border-color: #6c757d;
+    margin-left: 10px;
+}
+
+.controls .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 25px;
+}
