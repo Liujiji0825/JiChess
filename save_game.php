@@ -4,10 +4,7 @@ session_start();
 // 設定回傳格式為 JSON
 header('Content-Type: application/json');
 
-$host = 'localhost';
-$dbname = 'jichess_db';
-$user = 'root';
-$pass = '';
+require_once 'db.php';
 
 // 嘗試連線至資料庫
 try {

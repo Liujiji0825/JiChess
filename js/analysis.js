@@ -41,7 +41,7 @@ function initTree(startFen) {
 // ==============================
 // Stockfish 19 分析整合
 // ==============================
-var engine = new Worker('js/stockfish-19-single.js');
+var engine = new Worker('js/stockfish-19-lite-single.js');
 engine.postMessage('uci');
 
 var analysisTimer = null; // 用來防止連按導致引擎卡死的計時器

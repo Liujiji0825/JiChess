@@ -1,10 +1,7 @@
 <?php
 session_start();
 
-$host = 'localhost';
-$dbname = 'jichess_db';
-$user = 'root';
-$pass = '';
+require_once 'db.php';
 
 $pgn_to_load = "";
 $show_menu = true;

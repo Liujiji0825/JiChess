@@ -7,10 +7,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 $current_user = $_SESSION['username'];
-$host = 'localhost';
-$dbname = 'jichess_db';
-$user = 'root';
-$pass = ''; 
+require_once 'db.php'; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);

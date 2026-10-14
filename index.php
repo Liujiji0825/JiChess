@@ -6,7 +6,7 @@ $is_logged_in = isset($_SESSION['username']);
 $username = $is_logged_in ? $_SESSION['username'] : '訪客';
 
 // 建立一個函數來處理按鈕的點擊行為
-function getAction($target_url, $is_logged_in) {
+function getAction(string $target_url, bool $is_logged_in) {
     if ($is_logged_in) {
         // 已登入：正常前往目標網頁
         return 'href="' . $target_url . '"';
