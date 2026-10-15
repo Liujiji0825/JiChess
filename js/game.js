@@ -4,6 +4,10 @@ var game = new Chess();
 
 // 載入 Stockfish 19 核心啟動器
 var engine = new Worker('js/stockfish-19-lite-single.js');
+engine.onerror = function(err) {
+    alert("AI 引擎發生錯誤：" + err.message);
+    console.error("Worker Error:", err);
+};
 
 // 啟動並設定 UCI 協定
 engine.postMessage('uci');
